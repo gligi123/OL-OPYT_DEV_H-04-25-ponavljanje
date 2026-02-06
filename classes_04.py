@@ -45,13 +45,14 @@ class OrderLine:
 
     def __init__(self, product: Product, qty: int):
         # STUDENT CODE START
-        pass
+        self.product: Product = product
+        self.qty: int = max(1, qty)
         # STUDENT CODE END
 
     def line_total(self) -> int:
         """Vrati product.price * qty."""
         # STUDENT CODE START
-        pass
+        return self.product.price * self.qty
         # STUDENT CODE END
 
 
@@ -65,19 +66,19 @@ class Order:
 
     def __init__(self):
         # STUDENT CODE START
-        pass
+        self.lines: List[OrderLine] = []
         # STUDENT CODE END
 
     def add_line(self, line: OrderLine) -> None:
         """Dodaj line u lines."""
         # STUDENT CODE START
-        pass
+        self.lines.append(line)
         # STUDENT CODE END
 
     def total(self) -> int:
         """Vrati sumu line_total() za sve stavke."""
         # STUDENT CODE START
-        pass
+        return sum(line.line_total() for line in self.lines)
         # STUDENT CODE END
 
 
