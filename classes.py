@@ -5,14 +5,24 @@ class User:
     Polja:
     - name: string
     - balance: int  (pozitivno znači dugovanje, 0 znači nema duga)
-
-    - funkcionalnosti:
-        Povećaj dugovanje (balance) za amount ako je amount > 0.
-        Smanji dugovanje (balance) za amount ako je amount > 0. Balance ne smije pasti ispod 0.
     """
     # STUDENT CODE START
-    pass
+    def __init__(self, name: str, balance: int = 0):
+        self.name = name
+        self.balance = balance
     # STUDENT CODE END
+
+    def charge(self, amount: int) -> None:
+        """Povećaj dugovanje (balance) za amount ako je amount > 0."""
+        # STUDENT CODE START
+        pass
+        # STUDENT CODE END
+
+    def pay(self, amount: int) -> None:
+        """Smanji dugovanje (balance) za amount ako je amount > 0. Balance ne smije pasti ispod 0."""
+        # STUDENT CODE START
+        pass
+        # STUDENT CODE END
 
 
 # User
